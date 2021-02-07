@@ -5,42 +5,36 @@ import { StoreProvider } from './state/GlobalState';
 import './App.css';
 
 import Login from './views/Login/Login';
-import Challenges from './views/Challenges/Challenges';
-import ChallengeDetail from './views/Challenges/ChallengeDetail';
+import AboutView from './views/AboutView/AboutView';
+import Challenged from './views/Challenged/Challenged';
 import Community from './views/Community/Community'
 import Home from './views/Home/Home'
-import Landing from './views/Login/Landing';
-import PlantLog from './views/PlantLog/PlantLog';
-import Register from './views/Register/Register';
+import Leaderboard from './views/Leaderboard/Leaderboard'
 import Wrapper from './components/Wrapper/Wrapper';
-import PlayerDetails from './views/PlayerDetails/PlayerDetails'
-import Winner from './views/Winner/Winner';
-import GameBoard from './views/GameBoard/GameBoard';
-import Menu from './components/Menu/Menu';
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+import AdminPage from './views/AdminPage/AdminPage';
+import MyProfile from './views/MyProfile/MyProfile';
 
 function App() {
   return (
     <div className="App">
-      <div className="app-container app-border">
-        <StoreProvider>
-          <Wrapper>
-            <Switch>
-              <Route path="/keith-dev" exact component={PlayerDetails} />
-              <Route path="/" exact component={Login} />
-              <Route path="/challenges" exact component={Challenges} />
-              <Route path="/challengeDetail" exact component={ChallengeDetail} />
-              <Route path="/community" exact component={Community} />
-              <Route path="/home" exact component={Home} />
-              <Route path="/landing" exact component={Landing} />
-              <Route path="/plant-log" exact component={PlantLog} />
-              <Route path="/register" exact component={Register} />
-              <Route path="/winner" exact component={Winner} />
-              <Route path="/game-board" exact component={GameBoard} />
-            </Switch>
-            <Menu />
-          </Wrapper>
-        </StoreProvider>
-        </div>
+      <StoreProvider>
+        <Wrapper>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={Login} />
+            <Route path="/about" exact component={AboutView} />
+            <Route path="/challenged" exact component={Challenged} />
+            <Route path="/community" exact component={Community} />
+            <Route path="/home" exact component={Home} />
+            <Route path="/leaderboard" exact component={Leaderboard} />
+            <Route path="/profile" exact component={MyProfile} />
+            <Route path="/topsecretadminpage" exact component={AdminPage} />
+          </Switch>
+          <Footer />
+        </Wrapper>
+      </StoreProvider>
     </div>
   );
 }

@@ -1,30 +1,52 @@
-div.home-container {
-  max-width: inherit;
-  width: inherit;
-  max-height: inherit;
-  height: inherit;
+.user-stats ul {
+  margin: 4px;
+  padding-left: 15px;
+}
+.user-stats li {
+  list-style: none;
+}
+.user-stats h5 {
+  margin: 0px;
+  text-decoration: underline;
+
 }
 
-div.card-container {
-  /* display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center; */
-
-  /* right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0; */
-  margin: auto;
+h2.view-title {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-div.card-holder {
-  justify-content: space-around;
-  margin-top: 10px;
+div.home-screen {
+  padding-bottom: 85px;
+}
+
+div.home-dark-box {
   text-align: center;
-  width: 35vw;
+  margin-top: 5%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  min-height: 300px;
+  background-color: #0000009a;
+  align-items: center;
+  justify-content: center;
 }
 
-.home-container h1 {
-  padding-bottom: 15px;
+div.plant-log {
+  margin-bottom: 45px;
+}
+
+hr.home-rule {
+  display: none;
+}
+
+@media only screen and (max-width: 959px) {
+  hr.home-rule {
+    display: block;
+    margin: 25px auto;
+    background-color: rgba(255, 255, 255, 0.562);
+    padding: 4px;
+    width: 45%;
+    border: 0px;
+  }
 }
